@@ -1,0 +1,7 @@
+{
+  "functions": [
+    "Stage1BlobTrigger",
+    "Stage2QueueTrigger",
+    "Stage3QueueTrigger"
+  ]
+}

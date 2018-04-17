@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="HTTPDataCollectorAPI\**" />
+    <EmbeddedResource Remove="HTTPDataCollectorAPI\**" />
+    <None Remove="HTTPDataCollectorAPI\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="HTTPDataCollectorAPI.cs" />
+    <Compile Remove="SingleHttpClientInstance.cs" />
+    <Compile Remove="Stage2QueueTrigger - Copy.cs" />
+    <Compile Remove="Stage3QueueTrigger.cs" />
+  </ItemGroup>
+  <ItemGroup>    
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
